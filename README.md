@@ -31,3 +31,9 @@ The following is obtained by using Postman
 - Attach the file as form-data in the body and name it 'file':
 
 - This should be the result:
+
+## How to Test
+Enter the following in the command line:
+```ch
+npm run jest
+``` 
