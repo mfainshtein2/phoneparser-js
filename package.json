@@ -1,12 +1,14 @@
 {
   "name": "dps909",
-  "version": "1.0.0",
   "author": "Michael Fainshtein",
+  "version": "1.0.0",
   "description": "restful api for libphonenumber",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-	"jest": "jest",
+    "jest": "jest",
+    "lint": "eslint src test",
+    "lint-fix": "eslint --fix src test",
     "test": "npm run lint && npm run jest"
   },
   "license": "ISC",
@@ -22,10 +24,13 @@
     "forceExit": true
   },
   "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-plugin-jest": "^21.3.2",
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
     "jest": "^21.2.1",
     "mocha": "^5.0.0",
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "supertest": "^3.0.0"
   }
 }
