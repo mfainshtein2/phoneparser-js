@@ -15,8 +15,8 @@ app.get('/api/phonenumbers/parse/text/:phoneNumber',function(req, res){
 		res.status(400).send('Arguments Not Found');
 	}
 	else{
-		var list = [];
-		list.push(req.params.phoneNumber);
+
+		var list = req.params.phoneNumber.split(' ');
 		try {
 			var finalList = numberParser(list);
 			res.status(200).send(finalList);
